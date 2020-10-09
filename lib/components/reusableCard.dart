@@ -4,16 +4,16 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:pubg/constants/constants.dart';
 
 class ReusableCard extends StatefulWidget {
-  ReusableCard(
-      {@required this.audio,
-      @required this.img,
-      @required selections,
-      @required this.damage,
-      @required this.magazine,
-      @required this.range,
-      @required this.bulletSpeed,
-      @required this.fireRate,
-      @required this.underlineWidth});
+  ReusableCard({
+    @required this.audio,
+    @required this.img,
+    @required selections,
+    @required this.damage,
+    @required this.magazine,
+    @required this.range,
+    @required this.bulletSpeed,
+    @required this.fireRate,
+  });
 
   final String audio;
   final String img;
@@ -22,7 +22,7 @@ class ReusableCard extends StatefulWidget {
   final String range;
   final String bulletSpeed;
   final String fireRate;
-  final String underlineWidth;
+
   static AudioCache cache = AudioCache();
 
   @override
@@ -73,7 +73,7 @@ class _ReusableCardState extends State<ReusableCard> {
                 ),
                 Container(
                   height: 1.0,
-                  width: double.parse(widget.underlineWidth),
+                  width: 110.0,
                   color: Colors.black26,
                 ),
                 SizedBox(
@@ -134,7 +134,7 @@ class _ReusableCardState extends State<ReusableCard> {
                   });
                 },
                 child: Image.asset(
-                  'images/${widget.img}.png',
+                  'images/bizon.png',
                   height: 150.0,
                   width: 150.0,
                 ),
@@ -146,3 +146,6 @@ class _ReusableCardState extends State<ReusableCard> {
     );
   }
 }
+
+//double.parse(widget.underlineWidth)
+//'images/${widget.img}.png'

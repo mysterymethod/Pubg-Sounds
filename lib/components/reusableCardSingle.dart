@@ -38,16 +38,16 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:pubg/constants/constants.dart';
 
 class ReusableCardSingle extends StatefulWidget {
-  ReusableCardSingle(
-      {@required this.audio,
-      @required this.img,
-      @required selections,
-      @required this.damage,
-      @required this.magazine,
-      @required this.range,
-      @required this.bulletSpeed,
-      @required this.fireRate,
-      @required this.underlineWidth});
+  ReusableCardSingle({
+    @required this.audio,
+    @required this.img,
+    @required selections,
+    @required this.damage,
+    @required this.magazine,
+    @required this.range,
+    @required this.bulletSpeed,
+    @required this.fireRate,
+  });
 
   final String audio;
   final String img;
@@ -56,7 +56,7 @@ class ReusableCardSingle extends StatefulWidget {
   final String range;
   final String bulletSpeed;
   final String fireRate;
-  final String underlineWidth;
+
   static AudioCache cache = AudioCache();
 
   @override
@@ -107,7 +107,7 @@ class _ReusableCardSingleState extends State<ReusableCardSingle> {
                 ),
                 Container(
                   height: 1.0,
-                  width: double.parse(widget.underlineWidth),
+                  width: 110.0,
                   color: Colors.black26,
                 ),
                 SizedBox(

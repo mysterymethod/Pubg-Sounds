@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
-import './components/reusableCard.dart';
-import './components/reusableCardSingle.dart';
-import 'constants/constants.dart';
+import '../components/reusableCard.dart';
+import '../components/reusableCardSingle.dart';
+import '../constants/constants.dart';
 
 class Screen1 extends StatefulWidget {
   @override
@@ -59,7 +59,6 @@ class _Screen1State extends State<Screen1> {
                           range: i['range'],
                           bulletSpeed: i['bulletSpeed'],
                           fireRate: i['fireRate'],
-                          underlineWidth: i['underlineWidth'],
                         )
                       : ReusableCard(
                           audio: i['name'],
@@ -70,7 +69,6 @@ class _Screen1State extends State<Screen1> {
                           range: i['range'],
                           bulletSpeed: i['bulletSpeed'],
                           fireRate: i['fireRate'],
-                          underlineWidth: i['underlineWidth'],
                         ),
                 SizedBox(height: 50.0),
                 // selections[0]

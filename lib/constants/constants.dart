@@ -18,7 +18,6 @@ var kARguns = [
     'range': '100-400',
     'bulletSpeed': '715',
     'fireRate': '0.100s',
-    'underlineWidth': '58.0',
   },
   {
     'name': 'm762',
@@ -27,7 +26,6 @@ var kARguns = [
     'range': '100-400',
     'bulletSpeed': '783',
     'fireRate': '0.080s',
-    'underlineWidth': '65.0',
   },
   {
     'name': 'groza',
@@ -36,7 +34,6 @@ var kARguns = [
     'range': '100-400',
     'bulletSpeed': '785',
     'fireRate': '0.080s',
-    'underlineWidth': '90.0',
   },
   {
     'name': 'mutant',
@@ -45,6 +42,39 @@ var kARguns = [
     'range': '100-600',
     'bulletSpeed': '780',
     'fireRate': '0.100s',
-    'underlineWidth': '110.0',
+  },
+  {
+    'name': 'm416',
+    'damage': '41',
+    'magazine': '30',
+    'range': '100-600',
+    'bulletSpeed': '880',
+    'fireRate': '0.086s',
+  },
+  {
+    'name': 'aug',
+    'damage': '41',
+    'magazine': '30',
+    'range': '100-500',
+    'bulletSpeed': '940',
+    'fireRate': '0.0857s',
+  },
+  {
+    'name': 'g36c',
+    'damage': '41',
+    'magazine': '30',
+    'range': '100-600',
+    'bulletSpeed': '870',
+    'fireRate': '0.0.87s',
+  },
+  {
+    'name': 'm16',
+    'damage': '43',
+    'magazine': '30',
+    'range': '100-500',
+    'bulletSpeed': '900',
+    'fireRate': '0.075s',
   },
 ];
+
+var kSMG = [];
