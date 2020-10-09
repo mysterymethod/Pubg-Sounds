@@ -12,7 +12,8 @@ class ReusableCard extends StatelessWidget {
       @required this.magazine,
       @required this.range,
       @required this.bulletSpeed,
-      @required this.fireRate});
+      @required this.fireRate,
+      @required this.underlineWidth});
 
   final String audio;
   final String img;
@@ -21,6 +22,7 @@ class ReusableCard extends StatelessWidget {
   final String range;
   final String bulletSpeed;
   final String fireRate;
+  final String underlineWidth;
   List selections;
   static AudioCache cache = AudioCache();
   AudioPlayer player;
@@ -35,7 +37,6 @@ class ReusableCard extends StatelessWidget {
       onTapUp: (_) async {
         player.stop();
       },
-      onTap: () {},
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -69,7 +70,7 @@ class ReusableCard extends StatelessWidget {
                   ),
                   Container(
                     height: 1.0,
-                    width: 75.0,
+                    width: double.parse(underlineWidth),
                     color: Colors.black26,
                   ),
                   SizedBox(

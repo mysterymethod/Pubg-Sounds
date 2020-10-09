@@ -58,6 +58,7 @@ class _Screen1State extends State<Screen1> {
                           range: i['range'],
                           bulletSpeed: i['bulletSpeed'],
                           fireRate: i['fireRate'],
+                          underlineWidth: i['underlineWidth'],
                         ),
                 SizedBox(height: 50.0),
                 // selections[0]

@@ -17,7 +17,8 @@ var kARguns = [
     'magazine': '30',
     'range': '100-400',
     'bulletSpeed': '715',
-    'fireRate': '0.100s'
+    'fireRate': '0.100s',
+    'underlineWidth': '58.0',
   },
   {
     'name': 'm762',
@@ -25,7 +26,8 @@ var kARguns = [
     'magazine': '30',
     'range': '100-400',
     'bulletSpeed': '783',
-    'fireRate': '0.080s'
+    'fireRate': '0.080s',
+    'underlineWidth': '65.0',
   },
   {
     'name': 'groza',
@@ -33,7 +35,8 @@ var kARguns = [
     'magazine': '30',
     'range': '100-400',
     'bulletSpeed': '785',
-    'fireRate': '0.080s'
+    'fireRate': '0.080s',
+    'underlineWidth': '90.0',
   },
   {
     'name': 'mutant',
@@ -41,6 +44,7 @@ var kARguns = [
     'magazine': '20',
     'range': '100-600',
     'bulletSpeed': '780',
-    'fireRate': '0.100s'
+    'fireRate': '0.100s',
+    'underlineWidth': '110.0',
   },
 ];
