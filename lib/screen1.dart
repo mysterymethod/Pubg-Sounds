@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+import './components/reusableCard.dart';
+import './components/reusableCardSingle.dart';
+
+class Screen1 extends StatefulWidget {
+  @override
+  _Screen1State createState() => _Screen1State();
+}
+
+class _Screen1State extends State<Screen1> {
+  static AudioCache player = AudioCache();
+  List<bool> selections = [true, false];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Pubg Sounds'),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            child: Column(
+              children: [
+                ToggleButtons(
+                  children: [
+                    Text('Single'),
+                    Text('Auto'),
+                  ],
+                  isSelected: selections,
+                  onPressed: (int index) {
+                    setState(() {
+                      if (index == 1) {
+                        selections[1] = true;
+                        selections[0] = false;
+                      } else {
+                        selections[0] = true;
+                        selections[1] = false;
+                      }
+                    });
+                  },
+                ),
+                selections[0]
+                    //----------------------------------------------------1.AKM
+                    ? ReusableCardSingle(
+                        audio: 'akm',
+                        img: 'akm',
+                        selections: selections,
+                      )
+                    : ReusableCard(
+                        audio: 'akm',
+                        img: 'akm',
+                        selections: selections,
+                      ),
+                SizedBox(height: 50.0),
+                selections[0]
+                    //----------------------------------------------------2.M762
+                    ? ReusableCardSingle(
+                        audio: 'm762',
+                        img: 'm762',
+                        selections: selections,
+                      )
+                    : ReusableCard(
+                        audio: 'm762',
+                        img: 'm762',
+                        selections: selections,
+                      ),
+                SizedBox(height: 50.0),
+                selections[0]
+                    //----------------------------------------------------3.Groza
+                    ? ReusableCardSingle(
+                        audio: 'groza',
+                        img: 'groza',
+                        selections: selections,
+                      )
+                    : ReusableCard(
+                        audio: 'groza',
+                        img: 'groza',
+                        selections: selections,
+                      ),
+                SizedBox(height: 50.0),
+                selections[0]
+                    //----------------------------------------------------3.MUTANT
+                    ? ReusableCardSingle(
+                        audio: 'mutant',
+                        img: 'mutant',
+                        selections: selections,
+                      )
+                    : ReusableCard(
+                        audio: 'mutant',
+                        img: 'mutant',
+                        selections: selections,
+                      ),
+                SizedBox(height: 50.0),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
