@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 import './components/reusableCard.dart';
 import './components/reusableCardSingle.dart';
+import 'constants/constants.dart';
 
 class Screen1 extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class Screen1 extends StatefulWidget {
 class _Screen1State extends State<Screen1> {
   static AudioCache player = AudioCache();
   List<bool> selections = [true, false];
+  List<String> gun = ['akm', 'm762', 'groza', 'mutant'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,58 +42,63 @@ class _Screen1State extends State<Screen1> {
                     });
                   },
                 ),
-                selections[0]
-                    //----------------------------------------------------1.AKM
-                    ? ReusableCardSingle(
-                        audio: 'akm',
-                        img: 'akm',
-                        selections: selections,
-                      )
-                    : ReusableCard(
-                        audio: 'akm',
-                        img: 'akm',
-                        selections: selections,
-                      ),
+                for (var i in kARguns)
+                  selections[0]
+                      ? ReusableCardSingle(
+                          audio: i['name'],
+                          img: i['name'],
+                          selections: selections,
+                        )
+                      : ReusableCard(
+                          audio: i['name'],
+                          img: i['name'],
+                          selections: selections,
+                          damage: i['damage'],
+                          magazine: i['magazine'],
+                          range: i['range'],
+                          bulletSpeed: i['bulletSpeed'],
+                          fireRate: i['fireRate'],
+                        ),
                 SizedBox(height: 50.0),
-                selections[0]
-                    //----------------------------------------------------2.M762
-                    ? ReusableCardSingle(
-                        audio: 'm762',
-                        img: 'm762',
-                        selections: selections,
-                      )
-                    : ReusableCard(
-                        audio: 'm762',
-                        img: 'm762',
-                        selections: selections,
-                      ),
-                SizedBox(height: 50.0),
-                selections[0]
-                    //----------------------------------------------------3.Groza
-                    ? ReusableCardSingle(
-                        audio: 'groza',
-                        img: 'groza',
-                        selections: selections,
-                      )
-                    : ReusableCard(
-                        audio: 'groza',
-                        img: 'groza',
-                        selections: selections,
-                      ),
-                SizedBox(height: 50.0),
-                selections[0]
-                    //----------------------------------------------------3.MUTANT
-                    ? ReusableCardSingle(
-                        audio: 'mutant',
-                        img: 'mutant',
-                        selections: selections,
-                      )
-                    : ReusableCard(
-                        audio: 'mutant',
-                        img: 'mutant',
-                        selections: selections,
-                      ),
-                SizedBox(height: 50.0),
+                // selections[0]
+                //     //----------------------------------------------------2.M762
+                //     ? ReusableCardSingle(
+                //         audio: 'm762',
+                //         img: 'm762',
+                //         selections: selections,
+                //       )
+                //     : ReusableCard(
+                //         audio: 'm762',
+                //         img: 'm762',
+                //         selections: selections,
+                //       ),
+                // SizedBox(height: 50.0),
+                // selections[0]
+                //     //----------------------------------------------------3.Groza
+                //     ? ReusableCardSingle(
+                //         audio: 'groza',
+                //         img: 'groza',
+                //         selections: selections,
+                //       )
+                //     : ReusableCard(
+                //         audio: 'groza',
+                //         img: 'groza',
+                //         selections: selections,
+                //       ),
+                // SizedBox(height: 50.0),
+                // selections[0]
+                //     //----------------------------------------------------3.MUTANT
+                //     ? ReusableCardSingle(
+                //         audio: 'mutant',
+                //         img: 'mutant',
+                //         selections: selections,
+                //       )
+                //     : ReusableCard(
+                //         audio: 'mutant',
+                //         img: 'mutant',
+                //         selections: selections,
+                //       ),
+                // SizedBox(height: 50.0),
               ],
             ),
           ),

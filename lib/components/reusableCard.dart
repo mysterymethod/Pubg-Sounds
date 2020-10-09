@@ -5,10 +5,22 @@ import 'package:pubg/constants/constants.dart';
 
 class ReusableCard extends StatelessWidget {
   ReusableCard(
-      {@required this.audio, @required this.img, @required selections});
+      {@required this.audio,
+      @required this.img,
+      @required selections,
+      @required this.damage,
+      @required this.magazine,
+      @required this.range,
+      @required this.bulletSpeed,
+      @required this.fireRate});
 
   final String audio;
   final String img;
+  final String damage;
+  final String magazine;
+  final String range;
+  final String bulletSpeed;
+  final String fireRate;
   List selections;
   static AudioCache cache = AudioCache();
   AudioPlayer player;
@@ -46,7 +58,7 @@ class ReusableCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'AKM',
+                    img.toUpperCase(),
                     style: TextStyle(
                       fontFamily: 'Playfair',
                       fontSize: 17.0,
@@ -64,35 +76,35 @@ class ReusableCard extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    'Damage = 48',
+                    'Damage = $damage',
                     style: kGunPropertyTextStyle,
                   ),
                   SizedBox(
                     height: 2.0,
                   ),
                   Text(
-                    'Magazine = 30',
+                    'Magazine = $magazine',
                     style: kGunPropertyTextStyle,
                   ),
                   SizedBox(
                     height: 2.0,
                   ),
                   Text(
-                    'Range = 100 - 400',
+                    'Range = $range',
                     style: kGunPropertyTextStyle,
                   ),
                   SizedBox(
                     height: 2.0,
                   ),
                   Text(
-                    'Bullet Speed = 715',
+                    'Bullet Speed = $bulletSpeed',
                     style: kGunPropertyTextStyle,
                   ),
                   SizedBox(
                     height: 2.0,
                   ),
                   Text(
-                    'Fire Rate = 0.080',
+                    'Fire Rate = $fireRate',
                     style: kGunPropertyTextStyle,
                   ),
                 ],
