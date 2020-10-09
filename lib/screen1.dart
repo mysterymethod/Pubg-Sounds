@@ -24,10 +24,11 @@ class _Screen1State extends State<Screen1> {
           child: Container(
             child: Column(
               children: [
+                SizedBox(height: 15.0),
                 ToggleButtons(
                   children: [
-                    Text('Single'),
-                    Text('Auto'),
+                    Text('  Single '),
+                    Text('  Auto  '),
                   ],
                   isSelected: selections,
                   onPressed: (int index) {
@@ -41,6 +42,11 @@ class _Screen1State extends State<Screen1> {
                       }
                     });
                   },
+                  color: Colors.white30,
+                  selectedColor: Colors.white,
+                  fillColor: Colors.white24,
+                  borderRadius: BorderRadius.circular(25.0),
+                  selectedBorderColor: Colors.white,
                 ),
                 for (var i in kARguns)
                   selections[0]

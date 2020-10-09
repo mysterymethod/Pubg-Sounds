@@ -3,7 +3,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:pubg/constants/constants.dart';
 
-class ReusableCard extends StatelessWidget {
+class ReusableCard extends StatefulWidget {
   ReusableCard(
       {@required this.audio,
       @required this.img,
@@ -23,10 +23,20 @@ class ReusableCard extends StatelessWidget {
   final String bulletSpeed;
   final String fireRate;
   final String underlineWidth;
-  List selections;
   static AudioCache cache = AudioCache();
+
+  @override
+  _ReusableCardState createState() => _ReusableCardState();
+}
+
+class _ReusableCardState extends State<ReusableCard> {
+  List selections;
+
   AudioPlayer player;
+
   double pi = 3.14;
+
+  bool visible = true;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +62,7 @@ class ReusableCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  img.toUpperCase(),
+                  widget.img.toUpperCase(),
                   style: TextStyle(
                     fontFamily: 'Playfair',
                     fontSize: 17.0,
@@ -63,42 +73,42 @@ class ReusableCard extends StatelessWidget {
                 ),
                 Container(
                   height: 1.0,
-                  width: double.parse(underlineWidth),
+                  width: double.parse(widget.underlineWidth),
                   color: Colors.black26,
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
                 Text(
-                  'Damage = $damage',
+                  'Damage = ${widget.damage}',
                   style: kGunPropertyTextStyle,
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
                 Text(
-                  'Magazine = $magazine',
+                  'Magazine = ${widget.magazine}',
                   style: kGunPropertyTextStyle,
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
                 Text(
-                  'Range = $range',
+                  'Range = ${widget.range}',
                   style: kGunPropertyTextStyle,
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
                 Text(
-                  'Bullet Speed = $bulletSpeed',
+                  'Bullet Speed = ${widget.bulletSpeed}',
                   style: kGunPropertyTextStyle,
                 ),
                 SizedBox(
                   height: 2.0,
                 ),
                 Text(
-                  'Fire Rate = $fireRate',
+                  'Fire Rate = ${widget.fireRate}',
                   style: kGunPropertyTextStyle,
                 ),
               ],
@@ -106,17 +116,28 @@ class ReusableCard extends StatelessWidget {
           ),
           Transform.rotate(
             angle: pi / 4,
-            child: GestureDetector(
-              onTapDown: (_) async {
-                player = await cache.play('${audio}Auto.mp3');
-              },
-              onTapUp: (_) async {
-                player.stop();
-              },
-              child: Image.asset(
-                'images/$img.png',
-                height: 150.0,
-                width: 150.0,
+            child: AnimatedOpacity(
+              opacity: visible ? 1.0 : 0.4,
+              duration: Duration(milliseconds: 100),
+              child: GestureDetector(
+                onTapDown: (_) async {
+                  player =
+                      await ReusableCard.cache.play('${widget.audio}Auto.mp3');
+                  setState(() {
+                    visible = false;
+                  });
+                },
+                onTapUp: (_) async {
+                  player.stop();
+                  setState(() {
+                    visible = true;
+                  });
+                },
+                child: Image.asset(
+                  'images/${widget.img}.png',
+                  height: 150.0,
+                  width: 150.0,
+                ),
               ),
             ),
           ),
