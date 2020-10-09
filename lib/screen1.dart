@@ -48,6 +48,12 @@ class _Screen1State extends State<Screen1> {
                           audio: i['name'],
                           img: i['name'],
                           selections: selections,
+                          damage: i['damage'],
+                          magazine: i['magazine'],
+                          range: i['range'],
+                          bulletSpeed: i['bulletSpeed'],
+                          fireRate: i['fireRate'],
+                          underlineWidth: i['underlineWidth'],
                         )
                       : ReusableCard(
                           audio: i['name'],
