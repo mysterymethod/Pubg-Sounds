@@ -134,7 +134,7 @@ class _ReusableCardState extends State<ReusableCard> {
                   });
                 },
                 child: Image.asset(
-                  'images/vector.png',
+                  'images/${widget.img}.png',
                   height: 150.0,
                   width: 150.0,
                 ),

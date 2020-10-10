@@ -65,7 +65,15 @@ var kARguns = [
     'magazine': '30',
     'range': '100-600',
     'bulletSpeed': '870',
-    'fireRate': '0.0.87s',
+    'fireRate': '0.087s',
+  },
+  {
+    'name': 'scarl',
+    'damage': '41',
+    'magazine': '30',
+    'range': '100-500',
+    'bulletSpeed': '870',
+    'fireRate': '0.096s',
   },
   {
     'name': 'm16',
@@ -77,4 +85,53 @@ var kARguns = [
   },
 ];
 
-var kSMG = [];
+var kSMG = [
+  {
+    'name': 'uzi',
+    'damage': '26',
+    'magazine': '25',
+    'range': '100-200',
+    'bulletSpeed': '350',
+    'fireRate': '0.048s',
+  },
+  {
+    'name': 'ump45',
+    'damage': '41',
+    'magazine': '30',
+    'range': '100-300',
+    'bulletSpeed': '360',
+    'fireRate': '0.092s',
+  },
+  {
+    'name': 'tommy',
+    'damage': '40',
+    'magazine': '30',
+    'range': '100-200',
+    'bulletSpeed': '280',
+    'fireRate': '0.086s',
+  },
+  {
+    'name': 'bizon',
+    'damage': '35',
+    'magazine': '53',
+    'range': '100-300',
+    'bulletSpeed': '408',
+    'fireRate': '0.086s',
+  },
+  {
+    'name': 'vector',
+    'damage': '31',
+    'magazine': '19',
+    'range': '100-100',
+    'bulletSpeed': '350',
+    'fireRate': '0.055s',
+  },
+  {
+    'name': 'mp5k',
+    'damage': '33',
+    'magazine': '30',
+    'range': '100-100',
+    'bulletSpeed': '400',
+    'fireRate': '0.066s',
+  },
+];

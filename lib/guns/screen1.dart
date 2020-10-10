@@ -10,9 +10,8 @@ class Screen1 extends StatefulWidget {
 }
 
 class _Screen1State extends State<Screen1> {
-  static AudioCache player = AudioCache();
+  // static AudioCache player = AudioCache();
   List<bool> selections = [true, false];
-  List<String> gun = ['akm', 'm762', 'groza', 'mutant'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,45 +70,6 @@ class _Screen1State extends State<Screen1> {
                           fireRate: i['fireRate'],
                         ),
                 SizedBox(height: 50.0),
-                // selections[0]
-                //     //----------------------------------------------------2.M762
-                //     ? ReusableCardSingle(
-                //         audio: 'm762',
-                //         img: 'm762',
-                //         selections: selections,
-                //       )
-                //     : ReusableCard(
-                //         audio: 'm762',
-                //         img: 'm762',
-                //         selections: selections,
-                //       ),
-                // SizedBox(height: 50.0),
-                // selections[0]
-                //     //----------------------------------------------------3.Groza
-                //     ? ReusableCardSingle(
-                //         audio: 'groza',
-                //         img: 'groza',
-                //         selections: selections,
-                //       )
-                //     : ReusableCard(
-                //         audio: 'groza',
-                //         img: 'groza',
-                //         selections: selections,
-                //       ),
-                // SizedBox(height: 50.0),
-                // selections[0]
-                //     //----------------------------------------------------3.MUTANT
-                //     ? ReusableCardSingle(
-                //         audio: 'mutant',
-                //         img: 'mutant',
-                //         selections: selections,
-                //       )
-                //     : ReusableCard(
-                //         audio: 'mutant',
-                //         img: 'mutant',
-                //         selections: selections,
-                //       ),
-                // SizedBox(height: 50.0),
               ],
             ),
           ),
