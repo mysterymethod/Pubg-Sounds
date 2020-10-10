@@ -20,7 +20,7 @@ class _DMRState extends State<DMR> {
             child: Column(
               children: [
                 SizedBox(height: 15.0),
-                for (var i in kSNIPER)
+                for (var i in kDMR)
                   ReusableCardSingle(
                     audio: i['name'],
                     img: i['name'],

@@ -173,7 +173,7 @@ var kSNIPER = [
 
 var kDMR = [
   {
-    'name': 'mini 14',
+    'name': 'mini14',
     'damage': '46',
     'magazine': '20',
     'range': '100-800',
@@ -181,7 +181,7 @@ var kDMR = [
     'fireRate': '0.133s',
   },
   {
-    'name': 'mk 14',
+    'name': 'mk14',
     'damage': '61',
     'magazine': '10',
     'range': '100-800',
