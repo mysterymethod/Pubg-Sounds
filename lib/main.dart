@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'guns/screen1.dart';
+import 'guns/smg.dart';
+import 'guns/sniper.dart';
 
 void main() {
   runApp(Pubg());
@@ -13,7 +15,7 @@ class Pubg extends StatelessWidget {
           primaryColor: Color(0xFF0A0E21),
           scaffoldBackgroundColor: Color(0xFF1D2136),
         ),
-        home: Screen1());
+        home: SNIPER());
   }
 }
 

@@ -41,7 +41,6 @@ class ReusableCardSingle extends StatefulWidget {
   ReusableCardSingle({
     @required this.audio,
     @required this.img,
-    @required selections,
     @required this.damage,
     @required this.magazine,
     @required this.range,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audio_cache.dart';
 import '../components/reusableCard.dart';
 import '../components/reusableCardSingle.dart';
 import '../constants/constants.dart';
@@ -10,7 +9,6 @@ class Screen1 extends StatefulWidget {
 }
 
 class _Screen1State extends State<Screen1> {
-  // static AudioCache player = AudioCache();
   List<bool> selections = [true, false];
   @override
   Widget build(BuildContext context) {
@@ -47,12 +45,11 @@ class _Screen1State extends State<Screen1> {
                   borderRadius: BorderRadius.circular(25.0),
                   selectedBorderColor: Colors.white,
                 ),
-                for (var i in kARguns)
+                for (var i in kAR)
                   selections[0]
                       ? ReusableCardSingle(
                           audio: i['name'],
                           img: i['name'],
-                          selections: selections,
                           damage: i['damage'],
                           magazine: i['magazine'],
                           range: i['range'],

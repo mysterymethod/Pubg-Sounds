@@ -10,7 +10,7 @@ const kGunPropertyTextStyle = TextStyle(
 
 const kAppBarColor = Color(0xFF090E21);
 
-var kARguns = [
+var kAR = [
   {
     'name': 'akm',
     'damage': '48',
@@ -133,5 +133,201 @@ var kSMG = [
     'range': '100-100',
     'bulletSpeed': '400',
     'fireRate': '0.066s',
+  },
+];
+
+var kSNIPER = [
+  {
+    'name': 'awm',
+    'damage': '105',
+    'magazine': '5',
+    'range': '100-1000',
+    'bulletSpeed': '910',
+    'fireRate': '1.850s',
+  },
+  {
+    'name': 'm24',
+    'damage': '75',
+    'magazine': '5',
+    'range': '100-1000',
+    'bulletSpeed': '853',
+    'fireRate': '1.800s',
+  },
+  {
+    'name': 'win94',
+    'damage': '58',
+    'magazine': '7',
+    'range': '100-600',
+    'bulletSpeed': '760',
+    'fireRate': '0.980s',
+  },
+  {
+    'name': 'kar98',
+    'damage': '79',
+    'magazine': '5',
+    'range': '100-1000',
+    'bulletSpeed': '760',
+    'fireRate': '1.900s',
+  },
+];
+
+var kDMR = [
+  {
+    'name': 'mini 14',
+    'damage': '46',
+    'magazine': '20',
+    'range': '100-800',
+    'bulletSpeed': '990',
+    'fireRate': '0.133s',
+  },
+  {
+    'name': 'mk 14',
+    'damage': '61',
+    'magazine': '10',
+    'range': '100-800',
+    'bulletSpeed': '853',
+    'fireRate': '0.090s',
+  },
+  {
+    'name': 'qbu',
+    'damage': '48',
+    'magazine': '10',
+    'range': '100-800',
+    'bulletSpeed': '945',
+    'fireRate': '0.090s',
+  },
+  {
+    'name': 'sks',
+    'damage': '53',
+    'magazine': '10',
+    'range': '100-800',
+    'bulletSpeed': '800',
+    'fireRate': '0.090s',
+  },
+  {
+    'name': 'slr',
+    'damage': '58',
+    'magazine': '10',
+    'range': '100-800',
+    'bulletSpeed': '840',
+    'fireRate': '0.100s',
+  },
+  {
+    'name': 'vss',
+    'damage': '41',
+    'magazine': '10',
+    'range': '100-400',
+    'bulletSpeed': '330',
+    'fireRate': '0.086s',
+  },
+];
+
+var kPISTOL = [
+  {
+    'name': 'p1911',
+    'damage': '41',
+    'magazine': '7',
+    'range': '50-50',
+    'bulletSpeed': '250',
+    'fireRate': '0.110s',
+  },
+  {
+    'name': 'p92',
+    'damage': '35',
+    'magazine': '15',
+    'range': '50-50',
+    'bulletSpeed': '380',
+    'fireRate': '0.090s',
+  },
+  {
+    'name': 'r1895',
+    'damage': '55',
+    'magazine': '7',
+    'range': '50-50',
+    'bulletSpeed': '330',
+    'fireRate': '0.400s',
+  },
+  {
+    'name': 'p18c',
+    'damage': '23',
+    'magazine': '17',
+    'range': '50-50',
+    'bulletSpeed': '375',
+    'fireRate': '0.060s',
+  },
+  {
+    'name': 'r45',
+    'damage': '55',
+    'magazine': '6',
+    'range': '50-50',
+    'bulletSpeed': '330',
+    'fireRate': '0.250s',
+  },
+  {
+    'name': 'mp5k',
+    'damage': '33',
+    'magazine': '30',
+    'range': '50-50',
+    'bulletSpeed': '400',
+    'fireRate': '0.066s',
+  },
+  {
+    'name': 'skorpion',
+    'damage': '22',
+    'magazine': '20',
+    'range': '50-50',
+    'bulletSpeed': '350',
+    'fireRate': '0.076s',
+  },
+  {
+    'name': 'deagle',
+    'damage': '62',
+    'magazine': '7',
+    'range': '50-50',
+    'bulletSpeed': '450',
+    'fireRate': '0.256s',
+  },
+];
+
+var kSHORTGUN = [
+  {
+    'name': 's1897',
+    'damage': '26',
+    'magazine': '5',
+    'range': '25-25',
+    'bulletSpeed': '360',
+    'fireRate': '0.750s',
+  },
+  {
+    'name': 's686',
+    'damage': '26',
+    'magazine': '2',
+    'range': '25-25',
+    'bulletSpeed': '370',
+    'fireRate': '0.200s',
+  },
+  {
+    'name': 's12k',
+    'damage': '24',
+    'magazine': '5',
+    'range': '25-25',
+    'bulletSpeed': '350',
+    'fireRate': '0.250s',
+  },
+  {
+    'name': 'dbs',
+    'damage': '26',
+    'magazine': '14',
+    'range': '25-50',
+    'bulletSpeed': '360',
+    'fireRate': '0.199s',
+  },
+  {
+    'name': 'sawed-off',
+    'damage': '22',
+    'magazine': '2',
+    'range': '25-25',
+    'bulletSpeed': '330',
+    'fireRate': '0.200s',
   },
 ];
