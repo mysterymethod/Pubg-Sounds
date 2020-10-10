@@ -272,7 +272,7 @@ var kPISTOL = [
     'fireRate': '0.066s',
   },
   {
-    'name': 'skorpion',
+    'name': 'scorpion',
     'damage': '22',
     'magazine': '20',
     'range': '50-50',
