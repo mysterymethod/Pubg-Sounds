@@ -323,7 +323,7 @@ var kSHORTGUN = [
     'fireRate': '0.199s',
   },
   {
-    'name': 'sawed-off',
+    'name': 'sawedoff',
     'damage': '22',
     'magazine': '2',
     'range': '25-25',
